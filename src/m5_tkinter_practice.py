@@ -45,7 +45,7 @@ def main():
     say_hello_button['command'] = (lambda: print('hello world!'))
 
     # ------------------------------------------------------------------
-    # TODO: 6. After reading and understanding the m4e module,
+    # DONE: 6. After reading and understanding the m4e module,
     #   -- Put an Entry box on the Frame.
     #   -- Put a second Button on the Frame.
     #   -- Make this new Button, when pressed, print "Hello"
@@ -83,6 +83,12 @@ def main():
     #      n = int(s)
     ####################################################################
 
+    int_button = ttk.Button(frame1, text='print n times')
+    int_button.grid()
+    entry2 = ttk.Entry(frame1)
+    entry2.grid()
+    int_button['command'] = (lambda: print_n_times(entry2, my_entry_box))
+
     # ------------------------------------------------------------------
     # TODO: 8. As time permits, do other interesting GUI things!
     # -----------------------------------------------------------------
@@ -97,6 +103,12 @@ def check_for_okay(entry_box):
         print('Hello')
     else:
         print('Goodbye')
+
+def print_n_times(entry2, entry_box):
+    num_times = int(entry2.get())
+    content_to_print = entry_box.get()
+    for k in range(num_times):
+        print(content_to_print)
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
