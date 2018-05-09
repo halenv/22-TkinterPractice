@@ -53,6 +53,9 @@ def print_contents(entry_box):
       :type entry_box: ttk.Entry
     """
     contents_of_entry_box = entry_box.get()
+    # to get an int:
+    # contents_of_entry_box = int(entry_box.get())
+    # contents_of_entry_box += 10   # (proves it is an int)
     print(contents_of_entry_box)
 
 ########################################################################

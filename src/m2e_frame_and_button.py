@@ -15,10 +15,10 @@ from tkinter import ttk
 def main():
     root = tkinter.Tk()
 
-    frame1 = ttk.Frame(root, padding=10)
-    frame1.grid()
+    frame1 = ttk.Frame(root, padding=20)
+    frame1.grid()  # like window.render()
 
-    go_forward_button = ttk.Button(frame1, text='Forward')
+    go_forward_button = ttk.Button(frame1, text='Do not push')
     go_forward_button.grid()
 
     root.mainloop()
